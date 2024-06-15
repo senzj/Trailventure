@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 import useAuth from "../../hooks/useAuth";
 import { auth } from "../../utils/firebase";
+import { TbShoppingCart } from "react-icons/tb";
 
 function Header() {
   const location = useLocation();
@@ -49,7 +50,7 @@ function Header() {
             (!user ? (
               <Link
                 to="/login"
-                className="px-3 py-1 border-radius rounded-md bg-blue-600 text-black dark:text-white"
+                className="px-3 py-1 rounded-md bg-blue-600 text-black dark:text-white"
               >
                 BUY NOW!
               </Link>
@@ -61,6 +62,10 @@ function Header() {
                 Logout
               </button>
             ))}
+
+          <button className="p-2 rounded-md hover:bg-slate-300">
+            <TbShoppingCart className="text-2xl" />
+          </button>
         </nav>
       </div>
     </header>
