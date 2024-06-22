@@ -22,7 +22,6 @@ function useAuth() {
   // return user session data
   // user can be User object or null
   // https://firebase.google.com/docs/reference/js/v8/firebase.User
-  console.log(user);
   return { user };
 }
 
